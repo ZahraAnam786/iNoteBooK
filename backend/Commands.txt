@@ -1,0 +1,19 @@
+npx create-react-app inotebook
+
+//In Backend Folder all below work
+
+npm init // Make node_modules folder 
+
+answer questions 
+
+npm install express --save   //FrameWork of node
+
+npm i mongoose  // Abstraction layer for connect to MongoDB
+
+npm install -D nodemon // Start Server -D is for part of dev dependency [Press ctrl+S for restart server]
+package.js
+"scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  }
+npm run dev
