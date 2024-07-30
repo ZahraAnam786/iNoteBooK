@@ -1,5 +1,5 @@
-import { type } from "@testing-library/user-event/dist/type";
-import mongoose from "mongoose";
+
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const UserSchema = new Schema({
@@ -11,7 +11,7 @@ const UserSchema = new Schema({
   email: {
     type: String,
     required: true,
-    unique,
+    unique: true,
   },
   password: {
     type: String,
