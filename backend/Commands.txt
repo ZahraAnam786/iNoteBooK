@@ -17,3 +17,18 @@ package.js
     "dev": "nodemon index.js"
   }
 npm run dev
+
+
+for validation 
+npm i express-validator
+
+
+
+url Thunder
+http://localhost:5000/api/auth/create-user
+
+{
+  "name": "Anam",
+  "email": "anam@gmail.com",
+  "password": "5213anam"
+}
