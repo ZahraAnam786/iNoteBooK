@@ -16,7 +16,7 @@ package.js
     "start": "node index.js",
     "dev": "nodemon index.js"
   }
-npm run dev
+npm run dev  // run server
 
 
 for validation 
@@ -32,3 +32,11 @@ http://localhost:5000/api/auth/create-user
   "email": "anam@gmail.com",
   "password": "5213anam"
 }
+
+
+Passwor hashing 
+npm i bcryptjs
+
+For Authenicate
+npm i jsonwebtoken
+
