@@ -1,0 +1,10 @@
+
+//For Routing
+npm i react-router-dom
+
+//For Multiple Commands like server and client App
+npm i concurrently
+
+
+//For Start both
+npm run both
