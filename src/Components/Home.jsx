@@ -3,7 +3,7 @@ import AddNote from './AddNote';
 
 const Home = () => {
   return (
-    <div className='container' style={{ marginTop: '7rem' }}>
+    <div className='container' style={{ marginTop: '1rem' }}>
      <AddNote/>
     </div>
   )
