@@ -13,15 +13,15 @@ function App() {
     <NoteState>
         <Router>
           <Navbar />
-          <div  style={{ marginTop: '4rem' }}>
+          <div className='container'  style={{ marginTop: '4rem' }}>
           <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route exact path="/about" element={<About/>} />
           </Routes>       
           </div>  
-          </Router>       
-        </NoteState>
-      </div>
+        </Router>       
+    </NoteState>
+  </div>
    </>
   );
 }

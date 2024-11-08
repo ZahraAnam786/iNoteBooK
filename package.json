@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "both": "concurrently \"npm start\" \"nodemon backend/index.js\""
+    "backend": "npx nodemon backend/index.js",
+    "both": "concurrently \"npm start\" \"npm run backend\""
   },
   "eslintConfig": {
     "extends": [
