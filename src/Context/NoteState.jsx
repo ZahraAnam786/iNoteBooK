@@ -66,8 +66,13 @@ const NoteState = (props) => {
     }, 1000);
   }
 
+  const addNote = (note) => {
+    console.log(note);
+    setnotes.concat(note);
+  }
+
   return (
-     <NoteContext.Provider value={{state, update, Notes, setNotes}}>
+     <NoteContext.Provider value={{state, update, Notes, addNote}}>
         {props.children}
      </NoteContext.Provider>
   )

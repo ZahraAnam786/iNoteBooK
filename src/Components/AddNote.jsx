@@ -1,39 +1,57 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import NoteContext from '../Context/NoteContext';
 
 const AddNote = () => {
+
+  const context = useContext(NoteContext);
+  const {addNote} = context;
+
+  const [inputValue, setInputValue] = useState({
+    title: '',
+    description: '',
+    tag: ''
+  });
+ 
+ const SubmitEvent = (event) =>{
+  event.preventDefault();
+  addNote(inputValue);
+ }
+
+ const handleInput = (event) =>{
+     setInputValue({...inputValue, [event.target.name] : event.target.value })
+ }
+
   return (
     <div>
       <form>
         <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
-            Email address
+          <label htmlFor="title" className="form-label">
+            Title
           </label>
           <input
             type="text"
             className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
+            name="title"
+            id="title"
+            onChange={handleInput}
           />
           <div id="emailHelp" className="form-text">
           </div>
         </div>
         <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">
-            Password
+          <label htmlFor="description" className="form-label">
+            Description
           </label>
           <input
             type="text"
             className="form-control"
-            id="exampleInputPassword1"
+            name="description"
+            id="description"
+            onChange={handleInput}
           />
         </div>
-        <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-          <label className="form-check-label" htmlFor="exampleCheck1">
-            Check me out
-          </label>
-        </div>
-        <button type="submit" className="btn btn-primary">
+
+        <button type="submit" className="btn btn-primary" onClick={SubmitEvent}>
           Submit
         </button>
       </form>

@@ -7,7 +7,7 @@ const Home = () => {
     <div className='container'>
       <h2 className='my-2'>Add Note</h2>
      <AddNote/>
-     <h2 className='my-5'>Your Note</h2>
+     <h2 className='mt-5'>Your Note</h2>
      <AllNotes/>
     </div>
   )
