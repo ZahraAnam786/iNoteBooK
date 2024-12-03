@@ -40,3 +40,6 @@ npm i bcryptjs
 For Authenicate
 npm i jsonwebtoken
 
+For use api
+npm install cors
+

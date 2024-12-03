@@ -2,18 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
+import Alert from './Components/Alert';
 import About from './Components/About';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NoteState from './Context/NoteState';
 
+
 function App() {
+  
+
   return (
    <>
    <div>
     <NoteState>
         <Router>
           <Navbar />
-          <div className='container'  style={{ marginTop: '4rem' }}>
+          <div style={{ marginTop: '4rem' }}>
           <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route exact path="/about" element={<About/>} />
